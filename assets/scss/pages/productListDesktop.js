@@ -116,7 +116,7 @@ const app ={
       if(!this.isRedirecting){
         this.isRedirecting = true;
         if(numCheck === this.ProductNum[0]){
-          window.location.href = '../pages/productDetails.html';
+          window.location.href = '/Shoes-Ecommerce_week4_Phone/productDetails.html';
         }else if(numCheck === this.ProductNum[1]){
           window.location.href = '';
         }
