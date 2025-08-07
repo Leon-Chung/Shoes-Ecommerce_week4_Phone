@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    <title>LoginAndSignUp</title>
+     <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+
+      body.loaded {
+        visibility: visible;
+        transition: opacity 0.8s ease;
+        opacity: 1;
+      }
+    </style>
+    <script type="module" crossorigin src="/Shoes-Ecommerce_week4_Phone/assets/main-Yh1wsMXN.js"></script>
+    <link rel="stylesheet" crossorigin href="/Shoes-Ecommerce_week4_Phone/assets/main-CNkRQ5gq.css">
+  </head>
+  <body>
+      
+  <header class="header">
+    <div class="productListNavItem">
+      <div class="navBox">
+        <div class="logo">
+           <span><a href="../pages/index.html">URBNSTEP</a></span>
+        </div>
+        <div class="navIcon">
+          <div class="iconBox">
+            <a href="../pages/LoginAndSignUp.html">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGpSURBVHgBtVRNTsJgEJ2hYHDXqHH9EakWV72B5QbeQNjpCjiB8QSEnTv1BOIJrDt3dCcJLD4PoHalMaUdZ5oWiZSfkDibtq8zr29eX4uwoFTVdhHxEgAdADIZ8ggmHT0a+Xn9hTzw4NA+Y5JHIaE4uqM47gk3QnEg9/JmcE6JbSuMhAQCCr/qWusgwZVjYulbcMV4JcMXK4rATZph0pxt1toPiKjDpyYY5VNYuRqBSgZzvNDjoZfuoVYTIehkFTb77y1lWc5sz3KisNznzoDN7iqlzCkJn7PZNyIMQvDmn59TyrIbCJgMEUE/aURsSAwIqKlHw9u1iLI1kIwuM7iikCgWz66mPv1X5a8m3hhbLqCh0lRLawAUaYgKvtZDvZQo9UaS68Ly8tmr3qxXmCnA0va9EHDoPIYf2BsPwk/9m2xWWSw78tkgQksgkO8vZPMzhRWrNqhYxx+qWmvDmqWqR22eI5mVayNd55ylXvAbuV6XKHh/ezZ3915l1tzZRxRGzkqgxy912KAqli1/CSVEBLIr0RNsUBzUEz64RYqhhwVoYRK8zUo4fgCtVa9ofHmYvAAAAABJRU5ErkJggg==" alt="memberLogin">
+            </a>
+          </div>
+        </div>
+      </div>
+         <div class="productListNavBar">
+          <div class="oneNavBar">
+            <span><a href="javascript:;產品列表頁">商品列表</a></span>
+          </div>
+          <div class="twoNavBar">
+            <span><a href="javascript:;">品牌故事</a></span>
+          </div>
+        </div>
+    </div>
+  </header>
+
+      
+  <main id="app" >
+    <div class="logIn"  @click.prevent="change($event)">
+      <div class="layoutImg">
+        <span class="labelTitle">
+          URBNSTEP
+        </span>
+        <span>Your Step, Your Statement</span>
+        <img src="/Shoes-Ecommerce_week4_Phone/assets/hightHero-DuOu2eqs.png" alt="heroShoesBackground">
+      </div>
+      <div class="loginContent" v-show="isLoginShow">
+        <div class="contentText">
+          <h2>歡迎！</h2>
+        </div>
+        <div class="tablist">
+          <div class="loginTab active"><span>登入</span></div>
+          <div class="signupTab inactive" data-action="signIn"><span class="inactiveColor">註冊</span></div>
+        </div>
+        <ul class="form">
+          <li>
+            <div class="socialPlatform">
+              <img src="data:image/png;base64,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" alt="FacebookIcon">
+            </div>
+            <span>Facebook 登入</span>
+        </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQQSURBVHgB7ZhPaBRXHMe/b2dXDyaSgiCNFJcWYeuhLtgtxR6caP8cWqjbk4c2xkPpv1yqbSHQNqygXvSmKHgwGz3oxSiIoCZmPCjiKkQRsyjqihgjehCzgmh2n7/fJDs7uzuZN/PW1Yvfy87M+703n/293/u93xvgnZqTQJNKfG7G8SJmiojskEDH7KBPSlIWZCRSuJk7PYYmpAWY+PRLUwp8H5Hood8OxSsKQNmCFNn8pWELrQRkMOrRT5cmtMSwpUw+d2YgcI8gRokkTWMsuh/aYPWSA3hJoGNWQWWpBFyeNJPlWGyIBo3jtUoUSkBaFaO+gDylZDCkjjM98WKSEmm/2JwTkD0no9HRZuA6319sv+D+g4fwg5yG6JrLkxGvhxxzPK26cIllHyG7ZwdGjh3Eks7FvracmgyaJTvOPRT17BUz+nVjbgl5bXDvTrS3L7Dvx2/cDtBLVhZhV31LgwcTqTU95PgeaGrb//84cLv3DWJqqhi0q2mnMRUgwN7T12crP7F/GW7XvgMIpZkcW/fIpdlEPIqASq1cYU/pVLGIi5evkLeeIf3d1xg+ew7tbW0Eu8K2u/9gErnLV4MNKtHlXtW1MSjkhiC5e625Ctv/q04li+EYjGH/+LnbBneLV3LvX/3I37zlO7YUYh39WA6SuzGR+uqOanF0r/8BfZt+g44YMv3jL/afmUucdsZzw+9V7p0YXJYykyo49koveUcXbsOvm33hWJx2Pl61ZmkDoCgbcSi0dvUXNdMaRrxo/BK2W/J5Nd04gIYQcVXH1GzQhxWnmqHjpwLbi0jE2SAcwEqx6aeFtDJ19LT4LJS9myUSpuPTYuCkW6OFbQsoNPT+XDUGafWojCcon+mI4brXpwPbu1mqU1wWSsAR6zx0xas/MCSdZyqX1Sme99JS9RunJBtib21Q36bfKYn/pLSbpsNW5doBzF+wCgLS14sMlz00hGY0oUo1QtacBGsXSRlZKDR46Ii2F/M3bqnTjaxuc6waQNoHj0IhhuvbsgNhxTtI798BCiU6nrpvDffN44nbhUWdH3JFE/cb487de2QinGqlHmT+/HkNzzf/uxVXruXhK5refG7kT/cjr4o6gwDHy1321jWJdd9+M7NTnDjplFy8ZzN8pW3w8BG7TSkpMw3MXnZUF45Si4k3KjlA3ttY/9R7J4lOb2R3402J32WUMp5Nc/VZTuWXhDEqIVpyJq4CyCcCpa7rOWvMu91HrYZUwbF8iwXuyAO0ZLppTBUcy4BCjyYKk4s+WHqM8hOV4SKJ1yFOxkYpPX7RyqtMw31+4zOzEP0EG4eOZnaJTJjvhNofMGmKCBarVbAcZ2UgK6Q42vIPmF7ihTRN5xk+Mrg/AdvlG1VIXITgnd6iXgFFcpiIY5zCgQAAAABJRU5ErkJggg==" alt="AppleIcon">
+            </div>
+            <span>Apple 登入</span>
+          </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARjSURBVHgB7ZhPaBx1FMff+81M/m7pBmugCnWCB49OJIKI0gnoQRCSFD0UD03Ai3gwXq2SBIQem1w8VZucgig0Qk/aZH/eirHuehMUMvRgQgvNBpttm9n5Pd9v6m53sjs7s7vp2kM/l/3t7Jvf77vv937vvRmAp3QGQodsuU52wDBcJMoSCPvRxMoLlPDuQ7kwIgtFaJO2BN5yX3VQ4AQiTROAneIWSQQrgfLlSVnwoAVaEnjbHXPBwDkeutAmvOCyH/gLaYWmEqi3MSOsObaehSOAF/UUwcLwxuZyCtvmbLuObRlWLuVWtgbC4rPXNj9tZiKa/XjLdZzHJo4hQnfLdbPNbGI9+Fg9xxBgYT8YGB+RsukJbyhQx9wxw8qnEkdQ5EnWCOh3PtUeIRbDlENo8+wTvIRbfwus7AeDs0niNGajiyzuYqI4FgaClu4GmcUmCy1uu6/ZhhHM8584B/+JG17fnIaU1Hnw9lucSghzzW8jycKm0nigdl727OSJ9RstZYI6gfe+yeZKV19w1V5Pwxta9UCnRAT6P5kuIOa0uNLVU1C+mYkYc1x5wxu/jEAXiaQZLl9hnIjjB5D54C/oe3MnYsy1dRy6TDQPUrSE9b2xEwrVgnWJOimve9Blqlt88KPFDQDkGxmFW77+3OjQV38WIAF3ftcGw7ShE4JyQc4PhQewmmaEUDbFFBbj+IGXRpwGTWMe8WGotIsCU4eSDHVVLpbpUS93GD65HnQRoZN8ZVwZIFBsTcQuCwQkuzIU8IRTFcjFO7YqBIRD8D9RFWii8mKNkE5DN+GCUBlWT7HvWwXTChrabwcD2Q+/G3UvvS8lJM4dLJLC5SQ7IfAyxDQkiruiOoH979z3/GuW3ubIYfnNPwFf3nXg72BApw4JCcjzQ8m58gLnSmXZsQacByvDyCHhnm6l9vul0kvw8d7r2oP6JE87q5M2HAXYOxH3E6e0apKuE4gEa/rzH2WFwr5mgbWYwrjiXJ5s2qInob0nAoptudgRkR2ICLTeLsu8/4w8t3c63No6CByj37gI7Yqb380aqucKT2TH2SjfX4Co4Chjq+9xy0UJDSvIMgUzhbNrHrQizurhZxxy4mz44V7mPs9EOqa6RP3r2e8lx8ESJKxnoZF7ZfXMdIId6JAY+/bMXOnFz7YOBm84zWyp7M8cvoZxkxr9Io+ANiRT5FmkCuhngSqMHxKQpUDYhsCX+c9OQk1m6L0zCb27U/WzKFra+OLYbCqBoUg+sSYaeTiUdo4C8eAUDO58Alh+GOe6GcmdzzTs1GNrsY4vFGKcY8aDI0b13oT95y9Auf+PUBz5fmynnvjqQ3vSQJFLud2tgVAw77w7df2jGS/OJLGb0Z4M7qnRFAenJUjBUrkUjDcTp2np9VsYl4LzIIWB3y6SC/aCzhZpjNt6gRluOxmz/AyjuxwnyT6MY4U/8KPAWlphHQmsRacks890FChb1HQnioMfCYvBg0AWZtbafgX8lE75FydrrMLzGLyFAAAAAElFTkSuQmCC" alt="GoogleIcon">
+            </div>
+            <span>Google 登入</span>
+          </li>
+        </ul>
+      </div>
+      <!-- signIn -->
+      <div class="signInContent" v-show="isSignInShow">
+        <div class="contentText">
+          <h2>歡迎！</h2>
+        </div>
+        <div class="tablist">
+          <div class="loginTab inactive" data-action="logIn"><span class="inactiveColor">登入</span></div>
+          <div class="signupTab active"><span>註冊</span></div>
+        </div>
+        <ul class="form">
+          <li>
+            <div class="socialPlatform">
+              <img src="data:image/png;base64,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" alt="FacebookIcon">
+            </div>
+            <span>Facebook&nbsp;註冊</span>
+        </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAQQSURBVHgB7ZhPaBRXHMe/b2dXDyaSgiCNFJcWYeuhLtgtxR6caP8cWqjbk4c2xkPpv1yqbSHQNqygXvSmKHgwGz3oxSiIoCZmPCjiKkQRsyjqihgjehCzgmh2n7/fJDs7uzuZN/PW1Yvfy87M+703n/293/u93xvgnZqTQJNKfG7G8SJmiojskEDH7KBPSlIWZCRSuJk7PYYmpAWY+PRLUwp8H5Hood8OxSsKQNmCFNn8pWELrQRkMOrRT5cmtMSwpUw+d2YgcI8gRokkTWMsuh/aYPWSA3hJoGNWQWWpBFyeNJPlWGyIBo3jtUoUSkBaFaO+gDylZDCkjjM98WKSEmm/2JwTkD0no9HRZuA6319sv+D+g4fwg5yG6JrLkxGvhxxzPK26cIllHyG7ZwdGjh3Eks7FvracmgyaJTvOPRT17BUz+nVjbgl5bXDvTrS3L7Dvx2/cDtBLVhZhV31LgwcTqTU95PgeaGrb//84cLv3DWJqqhi0q2mnMRUgwN7T12crP7F/GW7XvgMIpZkcW/fIpdlEPIqASq1cYU/pVLGIi5evkLeeIf3d1xg+ew7tbW0Eu8K2u/9gErnLV4MNKtHlXtW1MSjkhiC5e625Ctv/q04li+EYjGH/+LnbBneLV3LvX/3I37zlO7YUYh39WA6SuzGR+uqOanF0r/8BfZt+g44YMv3jL/afmUucdsZzw+9V7p0YXJYykyo49koveUcXbsOvm33hWJx2Pl61ZmkDoCgbcSi0dvUXNdMaRrxo/BK2W/J5Nd04gIYQcVXH1GzQhxWnmqHjpwLbi0jE2SAcwEqx6aeFtDJ19LT4LJS9myUSpuPTYuCkW6OFbQsoNPT+XDUGafWojCcon+mI4brXpwPbu1mqU1wWSsAR6zx0xas/MCSdZyqX1Sme99JS9RunJBtib21Q36bfKYn/pLSbpsNW5doBzF+wCgLS14sMlz00hGY0oUo1QtacBGsXSRlZKDR46Ii2F/M3bqnTjaxuc6waQNoHj0IhhuvbsgNhxTtI798BCiU6nrpvDffN44nbhUWdH3JFE/cb487de2QinGqlHmT+/HkNzzf/uxVXruXhK5refG7kT/cjr4o6gwDHy1321jWJdd9+M7NTnDjplFy8ZzN8pW3w8BG7TSkpMw3MXnZUF45Si4k3KjlA3ttY/9R7J4lOb2R3402J32WUMp5Nc/VZTuWXhDEqIVpyJq4CyCcCpa7rOWvMu91HrYZUwbF8iwXuyAO0ZLppTBUcy4BCjyYKk4s+WHqM8hOV4SKJ1yFOxkYpPX7RyqtMw31+4zOzEP0EG4eOZnaJTJjvhNofMGmKCBarVbAcZ2UgK6Q42vIPmF7ihTRN5xk+Mrg/AdvlG1VIXITgnd6iXgFFcpiIY5zCgQAAAABJRU5ErkJggg==" alt="AppleIcon">
+            </div>
+            <span>Apple&nbsp;註冊</span>
+          </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAARjSURBVHgB7ZhPaBx1FMff+81M/m7pBmugCnWCB49OJIKI0gnoQRCSFD0UD03Ai3gwXq2SBIQem1w8VZucgig0Qk/aZH/eirHuehMUMvRgQgvNBpttm9n5Pd9v6m53sjs7s7vp2kM/l/3t7Jvf77vv937vvRmAp3QGQodsuU52wDBcJMoSCPvRxMoLlPDuQ7kwIgtFaJO2BN5yX3VQ4AQiTROAneIWSQQrgfLlSVnwoAVaEnjbHXPBwDkeutAmvOCyH/gLaYWmEqi3MSOsObaehSOAF/UUwcLwxuZyCtvmbLuObRlWLuVWtgbC4rPXNj9tZiKa/XjLdZzHJo4hQnfLdbPNbGI9+Fg9xxBgYT8YGB+RsukJbyhQx9wxw8qnEkdQ5EnWCOh3PtUeIRbDlENo8+wTvIRbfwus7AeDs0niNGajiyzuYqI4FgaClu4GmcUmCy1uu6/ZhhHM8584B/+JG17fnIaU1Hnw9lucSghzzW8jycKm0nigdl727OSJ9RstZYI6gfe+yeZKV19w1V5Pwxta9UCnRAT6P5kuIOa0uNLVU1C+mYkYc1x5wxu/jEAXiaQZLl9hnIjjB5D54C/oe3MnYsy1dRy6TDQPUrSE9b2xEwrVgnWJOimve9Blqlt88KPFDQDkGxmFW77+3OjQV38WIAF3ftcGw7ShE4JyQc4PhQewmmaEUDbFFBbj+IGXRpwGTWMe8WGotIsCU4eSDHVVLpbpUS93GD65HnQRoZN8ZVwZIFBsTcQuCwQkuzIU8IRTFcjFO7YqBIRD8D9RFWii8mKNkE5DN+GCUBlWT7HvWwXTChrabwcD2Q+/G3UvvS8lJM4dLJLC5SQ7IfAyxDQkiruiOoH979z3/GuW3ubIYfnNPwFf3nXg72BApw4JCcjzQ8m58gLnSmXZsQacByvDyCHhnm6l9vul0kvw8d7r2oP6JE87q5M2HAXYOxH3E6e0apKuE4gEa/rzH2WFwr5mgbWYwrjiXJ5s2qInob0nAoptudgRkR2ICLTeLsu8/4w8t3c63No6CByj37gI7Yqb380aqucKT2TH2SjfX4Co4Chjq+9xy0UJDSvIMgUzhbNrHrQizurhZxxy4mz44V7mPs9EOqa6RP3r2e8lx8ESJKxnoZF7ZfXMdIId6JAY+/bMXOnFz7YOBm84zWyp7M8cvoZxkxr9Io+ANiRT5FmkCuhngSqMHxKQpUDYhsCX+c9OQk1m6L0zCb27U/WzKFra+OLYbCqBoUg+sSYaeTiUdo4C8eAUDO58Alh+GOe6GcmdzzTs1GNrsY4vFGKcY8aDI0b13oT95y9Auf+PUBz5fmynnvjqQ3vSQJFLud2tgVAw77w7df2jGS/OJLGb0Z4M7qnRFAenJUjBUrkUjDcTp2np9VsYl4LzIIWB3y6SC/aCzhZpjNt6gRluOxmz/AyjuxwnyT6MY4U/8KPAWlphHQmsRacks890FChb1HQnioMfCYvBg0AWZtbafgX8lE75FydrrMLzGLyFAAAAAElFTkSuQmCC" alt="GoogleIcon">
+            </div>
+            <span>Google&nbsp;註冊</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+      
+  <footer class="footBottom" >
+    <div class="footBoxI">
+      <div class="lfetFootSmallBox">
+        <span><a href="../pages/index.html">URBNSTEP</a></span>
+      </div>
+      <div class="rightFootSmallBox">
+        <p><span><a href="../pages/productList.html">商品列表</a></span></p>
+        <p><span><a href="../pages/brandStory.html">品牌故事</a></span></p>
+      </div>
+    </div>
+    <div class="footBoxIi">
+      <span class="lastTwo">Copyright ©2025 URBNSTYLE</span>
+      <span class="last">All Rights Reserved.</span>
+    </div>
+  </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.17/vue.global.prod.min.js" integrity="sha512-B+xT9hBEokScoEYqF2L6zjF/R0mtYb11XURk2ERx89eRofWtgsrCljvx30JospRZRI3v19p9pRWvmLQ6ySS9FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/scss/pages/switch.js"></script>
+  </body>
+</html>

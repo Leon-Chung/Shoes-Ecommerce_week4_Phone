@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    <title>ProductList</title>
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+
+      body.loaded {
+        visibility: visible;
+        transition: opacity 0.8s ease;
+        opacity: 1;
+      }
+    </style>
+    <script type="module" crossorigin src="/Shoes-Ecommerce_week4_Phone/assets/main-Yh1wsMXN.js"></script>
+    <link rel="stylesheet" crossorigin href="/Shoes-Ecommerce_week4_Phone/assets/main-CNkRQ5gq.css">
+  </head>
+  <body>
+    
+  <header class="header">
+    <div class="productListNavItem">
+      <div class="navBox">
+        <div class="logo">
+           <span><a href="../pages/index.html">URBNSTEP</a></span>
+        </div>
+        <div class="navIcon">
+          <div class="iconBox">
+            <a href="../pages/LoginAndSignUp.html">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGpSURBVHgBtVRNTsJgEJ2hYHDXqHH9EakWV72B5QbeQNjpCjiB8QSEnTv1BOIJrDt3dCcJLD4PoHalMaUdZ5oWiZSfkDibtq8zr29eX4uwoFTVdhHxEgAdADIZ8ggmHT0a+Xn9hTzw4NA+Y5JHIaE4uqM47gk3QnEg9/JmcE6JbSuMhAQCCr/qWusgwZVjYulbcMV4JcMXK4rATZph0pxt1toPiKjDpyYY5VNYuRqBSgZzvNDjoZfuoVYTIehkFTb77y1lWc5sz3KisNznzoDN7iqlzCkJn7PZNyIMQvDmn59TyrIbCJgMEUE/aURsSAwIqKlHw9u1iLI1kIwuM7iikCgWz66mPv1X5a8m3hhbLqCh0lRLawAUaYgKvtZDvZQo9UaS68Ly8tmr3qxXmCnA0va9EHDoPIYf2BsPwk/9m2xWWSw78tkgQksgkO8vZPMzhRWrNqhYxx+qWmvDmqWqR22eI5mVayNd55ylXvAbuV6XKHh/ezZ3915l1tzZRxRGzkqgxy912KAqli1/CSVEBLIr0RNsUBzUEz64RYqhhwVoYRK8zUo4fgCtVa9ofHmYvAAAAABJRU5ErkJggg==" alt="memberLogin">
+            </a>
+          </div>
+        </div>
+      </div>
+         <div class="productListNavBar">
+          <div class="oneNavBar">
+            <span><a href="javascript:;產品列表頁">商品列表</a></span>
+          </div>
+          <div class="twoNavBar">
+            <span><a href="javascript:;">品牌故事</a></span>
+          </div>
+        </div>
+    </div>
+  </header>
+
+    
+  <!-- ProductListShow -->
+  <main class="section" id="app">
+    <div class="productListContainer">
+      <p><span>首頁</span><span class="content">/</span><span>所有商品</span></p>
+      <div class="allMerchandise">
+        <h3>所有商品</h3>
+      </div>
+      <div class="merchandiseItem">
+        <div class="listItem">
+          <div class="listpart" v-for="(item, key) in productsItem" :key="'item'+ key"
+          @click.prevent="clickItem(item)" :class="getStyle(item)" >
+            <div class="listBox" >
+              <a href="javascript:;" >
+                <h6 :style="item.merchandiseName === '所有商品'?{color: '#57a203'}:{color:'#212529'}">{{item.merchandiseName}}</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="shopItem" @click.prevent="shoeIntroduction($event)">
+          <div class="row">
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/1-BuTwa5ns.png" alt="黑白色滑板鞋" :data-num="ProductNum[0]">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">PLATFORM 404</span></p>
+                  <p><span class="twoCol">NT$2,600</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/2-27omXF0r.png" alt="棕白色滑板鞋" :data-num="ProductNum[1]">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">PLATFORM 404</span></p>
+                  <p><span class="twoCol">NT$2,600</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/5-D2bTJXKH.png" alt="灰白色滑板鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">VM001</span></p>
+                  <p><span class="twoCol">NT$2,600</span></p>
+                </div>
+            </div>
+         <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col" :style="watchItem('限定 / 聯名企劃')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/3-xXnApZod.png" alt="粉白色限定款">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Melty Kiss</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('厚底鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/4-7n3-26tC.png" alt="白色厚底鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">BOOMBLOK</span></p>
+                  <p><span class="twoCol">NT$3,200</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('厚底鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/6-DpsffCZh.png" alt="淺藍色厚底鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">BOOMBLOK</span></p>
+                  <p><span class="twoCol">NT$3,200</span></p>
+                </div>
+            </div>
+         <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col" :style="watchItem('慢跑鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/7-Bh34ECMS.png" alt="米白色慢跑鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">R:UNER</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('限定 / 聯名企劃')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/8-B5bsbSo3.png" alt="橘白色限定款">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Sugar Snap</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('慢跑鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/image%207-CyDeahIT.png" alt="白色慢跑鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Neofoam</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="/Shoes-Ecommerce_week4_Phone/assets/img7-bapnsZSu.png" alt="白色滑板鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Buttermood</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+         </div>
+         <div class="shopItemFoot">
+            <div class="leftBox">
+              <div class="smallBox">
+                <a href="javascript:;">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABkSURBVHgB5dKxDYBACAVQ7i72mDgAmpCcVK7kZLqJI1g7hRMonlHbo/d+A8ULNB/ACBHhPUMWsQwuVCvWzZZFLctO3M8/RDGSiVI8HB6fxSlY+V53LFMR2Fk4gUVPHcG8/Bb3Asz5MdLfm2G1AAAAAElFTkSuQmCC" alt="選擇左箭頭">
+                </a>
+              </div>
+            </div>
+            <div class="middleBox" @click.prevent="changeBg($event)">
+              <div class="oneBox"
+              :style="string === '1'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}" >
+                <a href="javascript:;">1</a>
+              </div>
+              <div class="twoBox"
+               :style="string === '2'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}">
+                <a href="javascript:;">2</a>
+              </div>
+              <div class="threeBox"
+              :style="string === '3'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}">
+                <a href="javascript:;">3</a>
+              </div>
+              <div class="fourBox" :style="string === '...'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}" >
+                <a href="javascript:;">...</a>
+              </div>
+              <div class="tenBox" :style="string === '10'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}">
+                <a href="javascript:;">10</a>
+              </div>
+            </div>
+             <div class="rightBox">
+              <div class="smallBox">
+                <a href="javascript:;">
+                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAASCAYAAABit09LAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABzSURBVHgB5dIxCoAwDAXQtOLg5hFSJUM7eYWewN5Qj+Vmb6C7Qo0ObjWOgh+yPUICH4CDiDUI0djaoMpqRqJOwoBkR0N2+Q1WEmbQJ9i9foIaVLp2bcWahQ25gVXg8TFOMYsMOb7P5Z/5IjprJqIbvyjuAWRuNPLV9B6AAAAAAElFTkSuQmCC" alt="選擇右箭頭">
+                </a>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+    
+    <div class="partIi">
+      <div class="partIiBox">
+        <span>加入會員取得 9 折優惠</span>
+        <span class="btn"><a href="../pages/LoginAndSignUp.html">馬上註冊</a></span>
+      </div>
+    </div> 
+    
+  <footer class="footBottom" >
+    <div class="footBoxI">
+      <div class="lfetFootSmallBox">
+        <span><a href="../pages/index.html">URBNSTEP</a></span>
+      </div>
+      <div class="rightFootSmallBox">
+        <p><span><a href="../pages/productList.html">商品列表</a></span></p>
+        <p><span><a href="../pages/brandStory.html">品牌故事</a></span></p>
+      </div>
+    </div>
+    <div class="footBoxIi">
+      <span class="lastTwo">Copyright ©2025 URBNSTYLE</span>
+      <span class="last">All Rights Reserved.</span>
+    </div>
+  </footer>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.17/vue.global.prod.min.js" integrity="sha512-B+xT9hBEokScoEYqF2L6zjF/R0mtYb11XURk2ERx89eRofWtgsrCljvx30JospRZRI3v19p9pRWvmLQ6ySS9FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/scss/pages/productListDesktop.js"></script>
+  </body>
+</html>
