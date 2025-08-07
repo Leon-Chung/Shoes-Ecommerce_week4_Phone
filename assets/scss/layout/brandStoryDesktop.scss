@@ -1,0 +1,283 @@
+$lh: 120%;
+$ls: 0.05em;
+$font: "Noto Sans TC", sans-serif;
+*{
+  box-sizing: border-box;
+}
+
+.container{
+  position: relative;
+  width: 1920px;
+  height: 400px;
+  .headerImg{
+    position: absolute;
+    display: block;
+    width: 100%;
+  }
+  .containerBackground{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background:rgba(0, 0, 0, 0.4);
+    }
+    .brand{
+      position: absolute;
+      color: #ffffff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1{
+        font-family: $font;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: $lh;
+        letter-spacing: $ls;
+       
+      }
+      P{
+        font-family: $font;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: $lh;
+        letter-spacing: $ls;
+       
+      }
+    } 
+  }
+ 
+  .greenBackground{
+     @extend .container;
+     height: 100%;
+    .box{
+      width: 856px;
+      height: 180px;
+      background: #f5fee7;
+      margin: 64px auto 48px;
+      h5{
+        color: #57a203;
+        text-align: center;
+        padding: 32px 32px 12px;
+        font-family: $font;
+        font-weight: 700;
+        line-height: $lh;
+        letter-spacing: $ls;
+        font-size: 20px;
+      }
+      .text{
+        padding: 0px 32px 32px;
+        text-align: center;
+        p{
+          font-family: $font;
+          line-height: 150%;
+          margin-top: 4px;
+          letter-spacing: $ls;
+        }
+      }
+    }
+    .footBox{
+      width: 1076px;
+      margin: 0 auto;
+      border-bottom: 1px;
+      img{
+        max-width: 100%;
+        height: 717px;
+        display: block;
+      }
+      h4{
+        margin: 24px 110px;
+        font-family: $font;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: $lh;
+        letter-spacing: $ls;
+      }
+      .textBox{
+        margin: 0 110px;
+        border-bottom: 1px solid #DEE2E6;
+        h5{
+          font-family: $font;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: $lh;
+          letter-spacing: $ls;
+          color: #57a203;
+          margin: 0px auto 16px;
+        }
+       p{
+        font-family: $font;
+        line-height: 150%;
+        letter-spacing: $ls;
+        margin-bottom: 16px;
+       }
+       .textFoot{
+        margin-bottom: 48px;
+       }
+      }
+    }
+  }
+  .brandJourney{
+   width: 856px;
+   margin: 48px auto;
+   h4{
+    font-family: $font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: $lh;
+    letter-spacing: $ls;
+    margin-bottom: 24px;
+   }
+   ul {
+     list-style: none;
+     padding-left: 1.2em;
+     border-bottom: 1px solid #DEE2E6 ;
+    li{
+      font-family: $font;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: $ls;
+      margin-bottom: 12px;
+      &::before{
+        content: "•";
+        font-size: 1em;
+        margin-left: -1.2em;
+        color: black;
+        display: inline-block;
+        width: 1.4em;
+      }
+    }
+    .lastLi{
+      margin-bottom: 48px;
+    }
+    span{
+      margin-left: 8px;
+      font-family: $font;
+      line-height: 150%;
+      letter-spacing: $ls;
+      padding-left: 8px;
+      border-left: 1px solid #212529;
+    }
+   }   
+  } 
+  .brandPhilosophy{
+   @extend .brandJourney;
+   margin-top: 0px;
+    .brandPhilosophyText{
+      border-bottom: 1px solid #DEE2E6 ;
+      padding-left: 0px;
+      li{
+        padding: 0px 12px;
+        border-left: 3px solid #DEE2E6;
+        &::before{
+          content: "";
+          font-size: 0px;
+          margin-left: 0px;
+          width: 0px;
+          display: none;
+        }
+      }
+    }
+  }
+  .brandStories{
+    @extend .brandPhilosophy;
+    margin-bottom: 64px;
+    .logoItem{
+      width: 100%;
+      border-bottom: 1px solid #DEE2E6 ;
+      .logo{
+        width: 280px;
+        height: 44px;
+        padding: 8px 0px;
+        overflow: hidden;
+        &::after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .icon{
+          position: relative;
+          float: left;
+          width: 20px;
+          height: 20px;
+          
+          img{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 2.5px;
+            left: 2.5px;
+            padding: 4px 0px;
+          }
+        }
+        span{
+          width: 252px;
+          padding: 8px 0px;
+          border-bottom: 1px solid #57a203;
+          word-spacing: -0.01em;
+          a{
+            display: inline-block;
+            font-family: $font;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: $ls;
+            padding: 0px 0px 4px 0px;
+            margin-left: 8px;
+            text-decoration: none;
+            color: #57a203;
+            }
+          }
+        }
+      
+      .logoTwo{
+        @extend .logo;
+        width: 211px;
+        span{
+          width: 183px;
+        }
+      }
+      .logoThree{
+        @extend .logo;
+        width: 240px;
+        margin-bottom: 48px;
+        span{
+          width: 212px;
+        }
+      }
+    }  
+  }
+ .ba{
+  width: 100%;
+
+  .banner{
+    display: flex;
+    padding: 24px 0px;
+    background: #e8fec5;
+    justify-content: center;
+    align-items: center;
+    .bannerContent{
+      font-family: $font;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: $lh;
+      letter-spacing: $ls;
+      margin-right: 24px;
+    }
+    .register{
+      max-width: 115.2px;
+      display: flex;
+      border-radius: 4px;
+      padding: 12px 24px;
+      gap: 8px;
+      background: #212529;
+      a{
+        font-family: $font;
+        font-weight: 500;
+        line-height: 150%;
+        font-size: 16px;
+        letter-spacing: $ls;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+ }

@@ -1,0 +1,186 @@
+@import './variables';
+
+@media screen and (max-width:768px) {
+  
+  
+*{
+  font-family: $font-family;
+  line-height: map-get($font-lh , "lh120" );
+  letter-spacing: $letterSpacing;
+  color: map-get($font-color , "neutral-900" );
+  box-sizing: border-box;
+}
+
+.active{
+  border-bottom: 2px solid #212529;
+  gap: 10px;
+}
+
+.inactive{
+  border-bottom: 2px solid #dee2e6;
+  gap: map-get($theme-gridGap , "spacing-xs" );
+  
+}
+.inactiveColor{
+  color: map-get($font-color , "neutral-600" );
+}
+
+//Main
+
+  .layoutImg{
+    position: relative;
+    .labelTitle{
+      position: absolute;
+      font-weight: map-get($font-weight , "extraBold" );
+      font-size: map-get($font-size , "EN" );
+      color: map-get($font-color , "white" );
+      top: 24px;
+      left: 24px;
+    }
+    span{
+      position: absolute;
+      top: 71px;
+      left: 24px;
+      font-weight: map-get($font-weight , "bold" );
+      color: map-get($font-color , "neutral-500" );
+    }
+    img{
+      display: block;
+      // width: 375px;
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      // object-position: center 45%;
+      object-position: center center;
+    }
+  }
+  .loginContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 12px;
+    gap: map-get($theme-gridGap , "spacing-l" );
+    background: map-get($background , "white" );
+    
+    .contentText{
+      display: flex;
+      justify-content: center;
+      h2{
+        font-weight: map-get($font-weight , "bold");
+        font-size: map-get($font-size , "EN/Headings/H4" );
+      }
+    }
+    .tablist{
+      display: flex;
+      width: 100%;
+      .loginTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+      .signupTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        cursor: pointer;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+    }
+    .form{
+      display: grid;
+      width: 100%;
+      gap: map-get($theme-gridGap , "spacing-m" );
+      li{
+        display: flex;
+        border-radius: map-get($border-radius , "radius-xs" );
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        background: map-get($background , "white" );
+        align-items: center;
+        cursor: pointer;
+        .socialPlatform img{
+          width: 40px;
+          height: 40px;
+          display: block;
+        }
+        span{
+          line-height: map-get($font-lh , "lh150" );
+        }
+      }
+    }
+  }
+  // signInContent -Style
+  .signInContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 12px;
+    gap: map-get($theme-gridGap , "spacing-l" );
+    background: map-get($background , "white" );
+    
+    .contentText{
+      display: flex;
+      justify-content: center;
+      h2{
+        font-weight: map-get($font-weight , "bold");
+        font-size: map-get($font-size , "EN/Headings/H4" );
+      }
+    }
+    .tablist{
+      display: flex;
+      width: 100%;
+      .loginTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        cursor: pointer;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+      .signupTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+    }
+    .form{
+      display: grid;
+      width: 100%;
+      gap: map-get($theme-gridGap , "spacing-m" );
+      li{
+        display: flex;
+        border-radius: map-get($border-radius , "radius-xs" );
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        background: map-get($background , "white" );
+        align-items: center;
+        cursor: pointer;
+        .socialPlatform img{
+          width: 40px;
+          height: 40px;
+          display: block;
+        }
+        span{
+          line-height: map-get($font-lh , "lh150" );
+        }
+      }
+    }
+  }
+}
+
+

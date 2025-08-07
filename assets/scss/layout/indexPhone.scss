@@ -1,0 +1,701 @@
+@import './variables';
+
+@media screen and (max-width: 768px){
+*{
+  color: map-get($font-color , "neutral-900" );
+  letter-spacing: $letterSpacing;
+  box-sizing: border-box;
+}
+
+.indexcontainer{
+  max-width: 100%;
+  overflow: hidden;
+  .heroSection{
+    position: relative;
+    height: 480px;
+    display: grid;
+    // padding: 16px 24px;
+    gap: 131px;
+    justify-items: center;
+    align-items: center;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 56% center;
+    }
+    .heroSectionContent{
+        position: absolute;
+        display: grid;
+        max-width: 327px;
+        gap: map-get($theme-gridGap, "spacing-xl");
+        .heroSectionTitle{
+          display: grid;
+          gap: map-get($theme-gridGap , "spacing-xs");
+          .title{
+            font-family: $font-family;
+            font-size: map-get($font-size, "Display2");
+            font-weight: map-get($font-weight, "bold" );
+            line-height: map-get($font-lh, "lh120" );
+            letter-spacing: $letterSpacing;
+            color:map-get($font-color , "white" )
+          }
+          span{
+            font-family: $font-family;
+            font-size: map-get($font-size, "TW/Headings/H5");
+            font-weight: map-get($font-weight , "bold" );
+            line-height: map-get($font-lh , "lh120");
+            letter-spacing: $letterSpacing;
+            color: map-get($font-color , "white" );
+          }
+        }
+        .heroSectionBtn{
+          display: flex;
+          max-width: 115.5px;
+          border-radius: map-get($border-radius , "radius-xs" );
+          padding: 12px 24px;
+          gap: map-get($theme-gridGap , "spacing-xs" );
+          background: map-get($background , "primary-300" );
+          a{
+            font-family: $font-family;
+            font-weight: map-get($font-weight, "medium" );
+            line-height: map-get($font-lh , "lh150" );
+            letter-spacing: $letterSpacing;
+            text-decoration: none;
+            &:hover{
+              color: #0052dd;
+            }
+          }
+        }
+      }
+  }
+  .newArrivla{
+    display: grid;
+    padding: 40px 12px;
+    gap: 10px;
+    .newArrivlaContent{
+      display: grid;
+      gap: map-get($theme-gridGap , "spacing-l" );
+      justify-content: center;
+      .newArrivlaTitle{
+        display: grid;
+        gap: map-get($theme-gridGap , "spacing-xs" );
+        text-align: center;
+        .titleText{
+          font-family: $font-family;
+          font-weight: map-get($font-weight , "bold" );
+          line-height: map-get($font-lh , "lh120" );
+          letter-spacing: $letterSpacing;
+          font-size: map-get($font-size , "TW/Headings/H2" );
+        }
+        p{
+          font-family: $font-family;
+          font-weight: map-get($font-weight , "bold" );
+          font-size: map-get($font-size , "TW/Headings/H4" );
+          line-height: map-get($font-lh , "lh120" );
+          letter-spacing: $letterSpacing;
+        }
+      }
+      .newArrivlaProduct{
+        display: grid;
+        gap: 24px;
+        .cardWrapper{
+          display: flex;
+          gap: map-get($theme-gridGap, "spacing-s" );
+          .card-Product{
+            display: grid;
+            gap: map-get($theme-gridGap, "spacing-xs" );
+            max-width: 169.5px;
+            .img01{
+              display: flex;
+              width: 100%;
+              height: 169.5px;
+              gap: 10px;
+              img{
+                display: block;
+              }
+            }
+            .label{
+              display: grid;
+              width: 164px;
+              p{
+                font-family: $font-family;
+                font-weight: map-get($font-weight , "bold" );
+                font-size: map-get($font-size , "TW/Headings/H6" );
+                line-height: map-get($font-lh , "lh120" );
+                letter-spacing: $letterSpacing;
+              }
+              .labelContent{
+                font-weight: map-get($font-weight , "medium" );
+                line-height: map-get($font-lh , "lh150" );
+                font-size: map-get($font-size , "TW/Label/md" );
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bestSeller{
+    display: grid;
+    padding: 40px 12px;
+    gap: 10px;
+    .bestSellerContent{
+      // width: 351px;
+      display: grid;
+      gap: map-get($theme-gridGap , "spacing-m" );
+      .SellerContentTitle{
+        display: flex;
+        justify-content: space-between;
+        padding: 5.5px 0px;
+        span{
+          font-family: $font-family;
+          font-weight: map-get($font-weight , "bold" );
+          font-size: map-get($font-size , "TW/Headings/H4" );
+          line-height: map-get($font-lh , "lh120" );
+          letter-spacing: $letterSpacing;
+        }
+      }
+      .SellerCardWrapper{
+        display: flex;
+        // flex-wrap: wrap;
+        gap: map-get($theme-gridGap , "spacing-m" );
+        .cardImage{
+          position: relative;
+          display: flex;
+          gap: 10px;
+          max-width: 100%;
+          max-height: 100%;
+          background: map-get($background , "neutral-100" );
+          img{
+            width: 300px;
+            height: 300px;
+            display: block;
+          }
+          span{
+            position: absolute;
+            display: flex;
+            padding: 8px 12px;
+            gap: 10px;
+            background: map-get($background , "primary-100" );
+            a{
+              font-family: $font-family;
+              font-size: map-get($font-size , "TW/Label/sm" );
+              font-weight: map-get($font-weight , "medium" );
+              line-height: map-get($font-lh , "lh150" );
+              letter-spacing: $letterSpacing;
+              text-decoration: none;
+              color: map-get($font-color , "primary-400" );
+            }
+          }
+        }
+      }
+    }
+  }
+  .sale{
+   position: relative;
+   display: grid;
+   padding: 24px 0px;
+   gap: 10px;
+   align-items: center;
+   justify-items: center;
+   img{
+    display: grid;
+    max-width: 100%;
+    padding: 64px 12px;
+    object-fit: cover;
+    gap: 10px;
+   }
+   .saleContent{
+    position: absolute;
+    display: grid;
+    gap: map-get($theme-gridGap , "spacing-xl" );
+    justify-items: center;
+    .saleContentText{
+      display: grid;
+      gap: map-get($theme-gridGap, "spacing-l" );
+      justify-items: center;
+      .ContentTextTitle{
+        display: grid;
+        gap: map-get($theme-gridGap , "spacing-m" );
+        justify-items: center;
+        .textTitle{
+          display: grid;
+          gap: map-get($theme-gridGap , "spacing-xs" );
+          max-width: 100%;
+          justify-items: center;
+          span{
+          font-family: $font-family;
+          font-weight: map-get($font-weight , "bold" );
+          font-size: map-get($font-size , "TW/Headings/H2" );
+          line-height: map-get($font-lh , "lh120" );
+          color: map-get($font-color , "white" );
+        }
+        .x{
+          width: 16px;
+          height: 34px;
+          font-size: map-get($font-size , "TW/Headings/H3" );
+          color: map-get($font-color , "primary-300" );
+          }
+        }
+        p{
+        font-family: $font-family;
+        font-size: map-get($font-size , "TW/Headings/H5" );
+        font-weight: map-get($font-weight , "bold" );
+        line-height: map-get($font-lh , "lh120" );
+        letter-spacing: $letterSpacing;
+        color: map-get($font-color , "white" );
+        }
+      }
+      .addTag{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: map-get($theme-gridGap , "spacing-xxs" );
+        span{
+          font-family: $font-family;
+          font-size: map-get($font-size , "TW/Label/md" );
+          line-height: map-get($font-lh , "lh150" );
+          color: map-get($font-color , "neutral-500" );
+        }
+      }
+    }
+    .saleContentBtn{
+      display: flex;
+      border-radius: map-get($border-radius , "radius-xs" );
+      padding: 12px 24px;
+      gap: map-get($theme-gridGap , "spacing-xs" );
+      background: map-get($background , "primary-300" );
+      a{
+        font-family: $font-family;
+        font-weight: map-get($font-weight , "medium" );
+        line-height: map-get($font-lh , "lh150" );
+        text-decoration: none;
+        &:hover{
+          color: #0052dd;
+        }
+      }
+    }
+   }
+   .lightning{
+    display: none;
+    position: absolute;
+    width: 78.5px;
+    height: 178px;
+    transform: rotate(24.55deg);
+    left: 16px;
+    img{
+      position: relative;
+      display: block;
+      max-width: 100%;
+      height: 139.07px;
+      top: 23.28px;
+      left: 18.52px;
+      transform: rotate(335.45deg);
+      object-fit: none;
+      animation: icon-glow 1.5s ease-in-out infinite;
+    }
+    @keyframes icon-glow {
+      0%{
+        filter: drop-shadow(0 0 4px #ffffff);
+      }
+      50%{
+        filter: drop-shadow(0 0 8px #ffffff);
+      }
+      100%{
+        filter: drop-shadow(0 0 4px #ffffff);
+      }
+    }
+   }
+   .frameBoy{
+    display: none;
+    position: absolute;
+    width: 484.95px;
+    height: 408.08px;
+    top: 222px;
+    left: 82px;
+    img{
+      display: block;
+      position: absolute;
+      width: 240px;
+      height: 360px;
+      left: 92.5px;
+      object-fit: contain;
+      filter:drop-shadow(0 0 2px #ffffff);
+      // z-index: 10;
+    }
+    .circleLight{
+      position: absolute;
+      width: 465px;
+      height: 142px;
+      top: 191px; //調整過, 原 top: 166px;
+      left: -40px; //調整過, 原 left: -30px;
+      transform: rotate(-167.12deg);
+      z-index: 9;
+      img{
+        position: absolute;
+        width: 333.08px;
+        height: 76.96px;
+        top: 37px;
+        left: 50.07px;
+        transform: rotate(-192.88deg);
+        object-fit: none;
+        filter:drop-shadow(-5px -3px 6px #d2ff00);
+      }
+    }
+   }
+   .starBox{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    // top: 232px; //768px
+    // right: 519px; // 768px
+    // bottom: 405px;
+    // left: 45px;
+    transform: translate(-340%, -340%);
+    img{
+      position: absolute;
+      top: 4.24px;
+      left: 4.43px;
+      display: block;
+      width: 39.29px;
+      height: 39.61px;
+      object-fit: contain;
+      filter: drop-shadow(0px 0px 15px #d4ff00);
+      padding: 0px;
+    }
+   }
+   .indicatorsBox{
+    display: none;
+    position: absolute;
+    top: 502px;
+    left: 916px;
+    display: flex;
+    max-width: 88px;
+    gap: map-get($theme-gridGap , "spacing-xs" );
+    .indicatorsActive{
+      display: flex;
+      max-width: 24px;
+      max-height: 8px ;
+      gap: 10px;
+      img{
+        display: block;
+        border-radius: map-get($border-radius, "radius-xs" );
+        background: map-get($background , "neutral-600" );
+      }
+    }
+    .indicatorsInActive{
+      display: flex;
+      max-width: 8px;
+      max-height: 8px;
+      gap: 10px;
+      img{
+        display: block;
+        background: map-get($background , "neutral-400" );
+        border-radius: 50%;
+      }
+    }
+   }
+   .sparkle{
+    position: absolute;
+    width: 76px; 
+    height: 64px;
+    transform: translate(210%, 110%);
+    // top: 322px;
+    // left: 1241px;
+    // right: 163px; // 768px
+    // bottom: 228px; // 768px
+    // left: 270px; // error
+    // bottom: 128px; // error
+    img{
+      padding: 0px;
+      position: absolute;
+      display: block;
+      width: 100%;
+      object-fit: fill;
+    }
+   }
+   .cloudsBox{
+    display: none;
+    position: absolute;
+    top: 466px;
+    left: 1372px;
+    width: 261.12px;
+    height: 121.19px;
+    
+    .frontClouds{
+      position: absolute;
+      top: 0px;
+      left: -0px;
+      width: 82.16px;
+      height: 83.63px;
+      display: block;
+      object-fit: none;
+      object-position: top center;
+      z-index: 5;
+    }
+    .middleClouds{
+      position: absolute;
+      top: 2px;
+      left: 72px;
+      width: 82.16px;
+      height: 83.63px;
+      display: block;
+      object-fit: none;
+      object-position: top center;
+      z-index: 4;
+    }
+    .lastClouds{
+      position: absolute;
+      top: 4px;
+      left: 144px;
+      width: 82.16px;
+      height: 83.63px;
+      display: block;
+      object-fit: none;
+      object-position: top center;
+      z-index: 3;
+    }
+   }
+   .signatureText{
+    display: none;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 94px;
+    left: 1520px;
+    // opacity: 0.9;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: none;
+    }
+   }
+   .allGreenLight{
+    display: none;
+    position: absolute;
+    width: 210.62px;
+    height: 238.76px;
+    left: 1755px;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: none;
+      object-position: left;
+    }
+   }
+  }
+  .series{
+    display: grid;
+    padding: 40px 12px;
+    gap: 10px;
+    .seriesContent{
+      display: grid;
+      gap: map-get($theme-gridGap , "spacing-m" );
+      span{
+        font-family: $font-family;
+        font-weight: map-get($font-weight , "bold" );
+        font-size: map-get($font-size , "TW/Headings/H4" );
+        line-height: map-get($font-lh , "lh120" );
+      }
+      .seriesCardWrapper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        .cardBox{
+          position: relative;
+          display: grid;
+          gap: map-get($theme-gridGap , "spacing-s" );
+          justify-items: center;
+          align-items: center;
+          img{
+            display: block;
+            width: 169.5px;
+            height: 169.5px;
+          }
+          .overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+          }
+          .cardCategory{
+            position: absolute;
+            display: grid;
+            gap: map-get($theme-gridGap , "spacing-xs" );
+            justify-items: center;
+            max-width: 100%;
+            p{
+              font-family: $font-family;
+              font-weight: map-get($font-weight , "bold" );
+              font-size: map-get($font-size , "TW/Headings/H6" );
+              line-height: map-get($font-lh , "lh120" );
+              color: map-get($font-color , "white" );
+            }
+            .h4{
+              font-size: map-get($font-size , "TW/Headings/H6" );
+            }
+          }
+        }
+      }
+    }
+  }
+  .style{
+    display: grid;
+    padding: 40px 12px;
+    gap: 10px;
+    .styleContent{
+      display: grid;
+      max-width: 351px;
+      gap: map-get($theme-gridGap , "spacing-m" );
+      p{
+        font-family: $font-family;
+        font-weight: map-get($font-weight , "bold" );
+        font-size: map-get($font-size , "TW/Headings/H4" );
+        line-height: map-get($font-lh , "lh120" );
+      }
+      .styleCardWrapper{
+        display: flex;
+        // flex-wrap: wrap;
+        width: 1484px;
+        gap: map-get($theme-gridGap , "spacing-m" );   
+        .cardOne{
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+          }
+        }
+        .cardTwo{
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+          }
+        }
+        .cardThree{
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: 35% 75%;
+          }
+        }
+        .cardFour{
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+          }
+        }
+        .cardFive{
+          max-width: 100%;
+          max-height: 100%;
+        
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
+        .cardSix{
+          max-width: 100%;
+          max-height: 100%;
+         
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center center;
+          }
+        }
+        .cardSeven{
+          max-width: 100%;
+          max-height: 100%;
+          
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center 75%;
+          }
+        }
+        .cardEight{
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+             object-position: center 65%;
+          }
+        }
+        .cardNice{
+          max-width: 100%;
+          max-height: 100%;
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+          }
+        }
+        .cardTen{
+          max-width: 100%;
+          max-height: 100%;
+          
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+           
+          }
+        }
+        .cardEleven{
+          max-width: 100%;
+          max-height: 100%;
+          
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+          }
+        }
+        .cardTwelve{
+          max-width: 100%;
+          max-height: 100%;
+         
+          img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            object-position: center bottom;
+          }
+        }
+      }
+    }
+  }
+  }
+}

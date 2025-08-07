@@ -1,0 +1,77 @@
+//間隙
+$theme-gridGap:(
+  "spacing-5xl": 64px,
+  "spacing-3xl": 48px,
+  "spacing-xl" : 32px,
+  "spacing-l" : 24px,
+  "spacing-m": 16px,
+  "spacing-s": 12px,
+  "spacing-xs": 8px,
+  "spacing-xxs": 4px,
+  );
+
+$font-family: 'Noto Sans TC', sans-serif;
+
+//文字大小 Typography
+$font-size:(
+  "Display1": 64px,
+  "Display2": 48px,
+  "EN/Headings/H1" : 40px,
+  "TW/Headings/H2" : 32px,
+  "TW/Headings/H3" : 28px,
+  "EN/Headings/H3" : 28px,
+  "Headings/H3" : 28px,
+  "TW/Headings/H4" : 24px,
+  "EN/Headings/H4" : 24px,
+  "TW/Headings/H5" : 20px,
+  "TW/Paragraph/lg" : 20px,
+  "TW/Label/md" : 16px,
+  "EN/Label/sm" : 14px,
+  "TW/Label/sm" : 14px,
+  "TW/Paragraph/sm" : 14px,
+);
+
+//文字重量
+$font-weight:(
+  "bold" : 700,
+  "medium" : 500,
+);
+
+//Line height
+$font-lh:(
+  "lh120" : 120%,
+  "lh150" : 150%,
+);
+
+//Letter spacing
+$letterSpacing: 0.05em;
+
+//文字顏色
+$font-color:(
+  "white" : #ffffff,
+  "neutral-900" : #212529,
+  "neutral-600" : #6c757d,
+  "neutral-500" : #adb5bd,
+  "primary-500" : #477a11, 
+  "primary-400" : #57a203, 
+  "primary-300" : #c0fa73, 
+);
+
+//border-radius
+$border-radius:(
+  "radius-s": 12px,
+  "radius-sm": 12px,
+  "radius-xs": 4px,
+);
+
+//background
+$background:(
+  "white" : #ffffff,
+  "neutral-900" : #212529,
+  "primary-300" : #c0fa73,
+  "primary-100" : #f5fee7,
+  "neutral-600" : #6c757d,
+  "neutral-400" : #ced4da,
+  "neutral-100" : #f8f9fa,
+  "navy" : #f0f3f7,
+);

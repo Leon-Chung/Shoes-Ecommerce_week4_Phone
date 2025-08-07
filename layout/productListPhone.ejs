@@ -1,0 +1,177 @@
+
+  <!-- ProductListShow -->
+  <main class="section" id="app">
+    <div class="productListContainer">
+      <p><span>首頁</span><span class="content">/</span><span>所有商品</span></p>
+      <div class="allMerchandise">
+        <h3>所有商品</h3>
+      </div>
+      <div class="merchandiseItem">
+        <div class="listItem">
+          <div class="listpart" v-for="(item, key) in productsItem" :key="'item'+ key"
+          @click.prevent="clickItem(item)" :class="getStyle(item)" >
+            <div class="listBox" >
+              <a href="javascript:;" >
+                <h6 :style="item.merchandiseName === '所有商品'?{color: '#57a203'}:{color:'#212529'}">{{item.merchandiseName}}</h6>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="shopItem" @click.prevent="shoeIntroduction($event)">
+          <div class="row">
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/1.png" alt="黑白色滑板鞋" :data-num="ProductNum[0]">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">PLATFORM 404</span></p>
+                  <p><span class="twoCol">NT$2,600</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/2.png" alt="棕白色滑板鞋" :data-num="ProductNum[1]">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">PLATFORM 404</span></p>
+                  <p><span class="twoCol">NT$2,600</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/5.png" alt="灰白色滑板鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">VM001</span></p>
+                  <p><span class="twoCol">NT$2,600</span></p>
+                </div>
+            </div>
+         <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col" :style="watchItem('限定 / 聯名企劃')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/3.png" alt="粉白色限定款">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Melty Kiss</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('厚底鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/4.png" alt="白色厚底鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">BOOMBLOK</span></p>
+                  <p><span class="twoCol">NT$3,200</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('厚底鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/6.png" alt="淺藍色厚底鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">BOOMBLOK</span></p>
+                  <p><span class="twoCol">NT$3,200</span></p>
+                </div>
+            </div>
+         <!-- </div> -->
+          <!-- <div class="row"> -->
+            <div class="col" :style="watchItem('慢跑鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/7.png" alt="米白色慢跑鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">R:UNER</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('限定 / 聯名企劃')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/8.png" alt="橘白色限定款">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Sugar Snap</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('慢跑鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/image 7.png" alt="白色慢跑鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Neofoam</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+            <div class="col" :style="watchItem('滑板鞋')">
+              <div class="card">
+                <a href="javascript:;">
+                  <img src="../assets/images/img7.png" alt="白色滑板鞋">
+                </a>
+              </div>
+              <div class="textBox">
+                  <p><span class="oneCol">Buttermood</span></p>
+                  <p><span class="twoCol">NT$4,000</span></p>
+                </div>
+            </div>
+         </div>
+         <div class="shopItemFoot">
+            <div class="leftBox">
+              <div class="smallBox">
+                <a href="javascript:;">
+                  <img src="../assets/images/Vector1.png" alt="選擇左箭頭">
+                </a>
+              </div>
+            </div>
+            <div class="middleBox" @click.prevent="changeBg($event)">
+              <div class="oneBox"
+              :style="string === '1'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}" >
+                <a href="javascript:;">1</a>
+              </div>
+              <div class="twoBox"
+               :style="string === '2'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}">
+                <a href="javascript:;">2</a>
+              </div>
+              <div class="threeBox"
+              :style="string === '3'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}">
+                <a href="javascript:;">3</a>
+              </div>
+              <div class="fourBox" :style="string === '...'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}" >
+                <a href="javascript:;">...</a>
+              </div>
+              <div class="tenBox" :style="string === '10'?{backgroundColor:'#c0fa73', transition: '0.5s'}:{backgroundColor:'#ffffff', transition: '0.5s'}">
+                <a href="javascript:;">10</a>
+              </div>
+            </div>
+             <div class="rightBox">
+              <div class="smallBox">
+                <a href="javascript:;">
+                  <img src="../assets/images/Vector2.png" alt="選擇右箭頭">
+                </a>
+              </div>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </main>
+

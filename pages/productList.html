@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="../main.js"></script>
+    <title>ProductList</title>
+    <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+
+      body.loaded {
+        visibility: visible;
+        transition: opacity 0.8s ease;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./layout/productNavPhone'); -%>
+    <%- include('./layout/productListPhone'); -%>
+    <%- include('./layout/sectionPhone'); -%>
+    <%- include('./layout/footerPhone'); -%>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.17/vue.global.prod.min.js" integrity="sha512-B+xT9hBEokScoEYqF2L6zjF/R0mtYb11XURk2ERx89eRofWtgsrCljvx30JospRZRI3v19p9pRWvmLQ6ySS9FA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/scss/pages/productListDesktop.js"></script>
+  </body>
+</html>

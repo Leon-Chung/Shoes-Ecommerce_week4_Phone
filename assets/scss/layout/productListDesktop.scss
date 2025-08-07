@@ -1,0 +1,221 @@
+$font: 'Noto Sans TC', sans-serif;
+$ls: 0.05em;
+
+/* 鞋子樣式預設或被選中的樣式 */
+.active{
+  // background: #abcdec;
+  background: #f1f3f7;
+  transition: 0.3s;
+}
+// /* 非選中的樣式 */
+.faded{
+  background:  #ffffff;
+  transition: 0.3s;
+}
+
+/* 換頁預設或被選中的樣式 */
+.act{
+  background: #c0fa73;
+  transition: 0.3s;
+}
+// /* 非選中的樣式 */
+.fad{
+  background:  #ffffff;
+  transition: 0.3s;
+}
+
+*{
+  box-sizing: border-box;
+  color: #212529;
+}
+
+  .productListContainer{
+    display: grid;
+    padding: 32px 312px;
+    gap: 24px;
+    p{
+      display: flex;
+      gap: 12px;
+      span{
+        display: flex;
+        gap: 10px;
+        font-family: $font;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: #6C757d;
+      }
+      .content{
+        font-family: $font;
+        font-weight: 700;
+        line-height: 150%;
+        letter-spacing: 0em;
+        color: #dee2e6;
+      }
+    }
+    .allMerchandise{
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 0px;
+      h3{
+        font-family: $font;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 120%;
+        letter-spacing: $ls;
+      }
+    }
+    .merchandiseItem{
+      display: flex;
+      max-width: 100%;
+      gap: 24px;
+      .listItem{
+        display: grid;
+        width: 196px;
+        max-height: 304px;
+        padding-right:24px ;
+        gap: 16px;
+        .listpart{
+          display: grid;
+          gap: 8px;
+          .listBox{
+            display: grid;
+            align-content: center;
+            padding: 12px 0px;
+            gap: 8px;
+          a{
+            text-decoration: none;
+            h6{
+              font-family: $font;
+              font-weight: 500;
+              line-height: 150%;
+              letter-spacing: $ls;
+             
+            }
+          }
+        }
+        }
+      }
+      .shopItem{
+        width: 1076px;
+        display: grid;
+        gap: 48px;
+        justify-items: center;
+        .row{
+          display: flex;
+          justify-content: space-between;
+          gap: 24px;
+            .col{
+              display: grid;
+              gap: 12px;
+              .card{
+                display: flex;
+                gap: 10px;
+                background: #f1f3f7;
+                img{
+                  display: block;
+                  width: 342.67px;
+                  height: 342.67px;
+                  }
+                }
+               .textBox{
+                display: grid;
+                gap: 4px;
+                p .oneCol{
+                  font-family: $font;
+                  font-weight: 700;
+                  line-height: 120%;
+                  letter-spacing: $ls;
+                }
+                p .twoCol{
+                  font-family: $font;
+                  font-weight: 500;
+                  line-height: 150%;
+                  letter-spacing: $ls;
+                }
+            }
+          }
+        }
+        .shopItemFoot{
+          display: flex;
+          gap: 12px;
+          .leftBox{
+            display: flex;
+            min-width: 40px;
+            min-height: 40px;
+            border-radius: 4px;
+            padding: 8px;
+            gap: 8px;
+            opacity: 0.4;
+            .smallBox{
+              width: 20px;
+              height: 20px;
+              a{
+                img{
+                  position: relative;
+                  display: block;
+                  width: 8.75px;
+                  height: 16.25px;
+                  top: 1.87px;
+                  left: 5.62px;
+                }
+              }
+            }
+          }
+          .middleBox{
+            display: flex;
+            gap: 8px;
+            .oneBox{
+              display: grid;
+              width: 40px;
+              height: 40px;
+              gap: 10px;
+              background-color:#c0fa73 ;
+              justify-content: center;
+              align-content: center;
+              a{
+                width: 10px;
+                height: 24px;
+                font-family: $font;
+                font-weight: 500;
+                line-height: 150%;
+                letter-spacing: $ls;
+                text-decoration: none;
+                &:hover{
+                  color: #c0fa73;
+                }
+              }
+            }
+            .twoBox{
+              @extend .oneBox;
+              background-color:#ffffff ;
+              a{
+                width: 9px;
+                font-weight: 400;
+              }
+            }
+            .threeBox{
+              @extend .twoBox;
+            }
+            .fourBox{
+              @extend .threeBox;
+              a{
+                width: 15px;
+              }
+            }
+            .tenBox{
+              @extend .fourBox;
+              a{
+                width: 19px;
+              }
+            }
+          }
+          .rightBox{
+            @extend .leftBox;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+

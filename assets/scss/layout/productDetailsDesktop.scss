@@ -1,0 +1,455 @@
+$font: 'Noto Sans TC';
+$ls: 0.05em;
+
+*{
+  box-sizing: border-box;
+}
+
+  .introductionContainer{
+    width: 1920px;
+    padding: 64px 312px;
+    display: flex;
+    gap: 24px;
+    .blackShoe{
+      max-width: 746px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      .one{
+        display: flex;
+        gap: 10px;
+        background: #f0f3f7;
+        img{
+          width: 369px;
+          height: 369px;
+          display: block;
+        }
+      }
+      .two{
+        @extend .one;
+        padding: 0px 56px;
+        align-items: center;
+        img{
+          width: 257px;
+          height: 257px;
+        }
+      }
+      .three{
+        @extend .one;
+        background: #f1f3f7;
+      }
+      .four{
+        @extend .two;
+        padding: 0px 16px;
+        img{
+          width: 337px;
+          height: 337px;
+        }
+      }
+      .five{
+        @extend .one;
+      }
+      .six{
+        @extend .one;
+        background: #f8f9fa;
+      }
+      .seven{
+        @extend .three;
+      }
+      .eight{
+        @extend .four;
+        padding: 0px 0px 48px 48px;
+        align-items: none;
+        img{
+          width: 321px;
+          height: 321px;
+        }
+      }
+    }
+    .blackShoesDetails{
+      max-width: 526px;
+      max-height: 1267px;
+      display: grid;
+      gap: 32px;
+      .topDetails{
+        display: grid;
+        gap: 16px;
+        .topOne{
+          display: grid;
+          gap: 12px;
+          p{
+            display: flex;
+            gap: 12px;
+            span{
+              font-family: $font;
+              font-weight: 500;
+              line-height: 150%;
+              letter-spacing: $ls;
+              color: #6c757d;
+            }
+            .special{
+              font-weight: 700;
+              letter-spacing: 0em;
+              color: #dee2e6;
+            }
+            .specialColor{
+              color: #212529;
+            }
+          }
+         h2{
+          font-family: $font;
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 120%;
+          letter-spacing: $ls;
+         }
+        }
+        .middleTwo{
+          display: flex;
+          max-width: 175px;
+          gap: 8px;
+          align-items: center;
+          h5{
+            font-family: $font;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 120%;
+            letter-spacing: $ls;
+            color: #57A203;
+          }
+          span{
+            font-family: $font;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: $ls;
+            color: #adb5bd;
+            text-decoration: line-through;
+          }
+        }
+        .lastThree{
+          display: grid;
+          max-width: 100%;
+          gap: 12px;
+          p{
+            font-family: $font;
+            line-height: 150%;
+            letter-spacing: $ls;
+          }
+        }
+      }
+      .middleDetails{
+        display: grid;
+        gap: 48px;
+        .topFour{
+          display: grid;
+          gap: 8px;
+          p{
+            font-family: $font;
+            line-height: 150%;
+            letter-spacing: $ls;
+          }
+          .colorBox{
+            display: flex;
+            gap: 8px;
+            .blueBox, .khakiBox{
+              display: grid;
+              width: 64px;
+              gap: 4px;
+              align-content: center;
+              justify-items: center;
+              .smallPic{
+                display: flex;
+                width: 64px;
+                height: 64px;
+                gap: 10px;
+                background: #f1f3f7;
+                img{
+                  display: block;
+                }
+              }
+              span{
+                  font-family: $font;
+                  font-weight: 500;
+                  line-height: 150%;
+                  letter-spacing: $ls;
+                  color: #6c757d;
+                }
+            }
+          }
+        }
+        .middleFive{
+          display: grid;
+          max-width: 100%;
+          gap: 8px;
+          p{
+            font-family: $font;
+            line-height: 150%;
+            letter-spacing: $ls;
+            color: #212529;
+          }
+          .sizeDisplay{
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            .firstColor{
+              border: 1px solid #212529;
+            }
+            li{
+              display: flex;
+              width: 160px;
+              border-radius: 4px;
+              border: 1px solid #dee2ed;
+              padding: 12px 24px;
+              gap: 10px;
+              justify-content: center;
+              align-items: center;
+            }
+            span{
+              font-family: $font;
+              font-weight: 500;
+              line-height: 150%;
+              letter-spacing: $ls;
+              color: #212529;
+            }
+            .lastColor{
+              opacity: 0.4;
+            }
+          }
+          span{
+            font-family: $font;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: $ls;
+            color: #d74f4f;
+          }
+        }
+        .btnBox{
+          display: flex;
+          gap: 8px;
+          // max-height: 48px;
+          .whiteBox{
+            display: flex;
+            width: 259px;
+            border-radius: 4px;
+            border: 1px solid #212529;
+            padding: 12px 24px;
+            gap: 8px;
+            align-items: center;
+            justify-content:center ;
+            .loveBox{
+              width: 20px;
+              height: 20px;
+              img{
+                display: block;
+                width: 20px;
+                height: 18.75px;
+                color: #212529;
+              }
+            }
+            span{
+              font-family: $font;
+              font-weight: 500;
+              line-height: 150%;
+              letter-spacing: $ls;
+              color: #212529;
+              a{
+                text-decoration: none;
+              }
+            }
+          }
+          .blackBox{
+            @extend .whiteBox;
+            border: 0px;
+            background: #212529;
+            .bagBox{
+              width: 20px;
+              height: 20px;
+              img{
+                position: relative;
+                display: block;
+                width: 17.94px;
+                left: 1.03px;
+                color: #ffffff;
+              }
+            }
+            span{
+              font-family: $font;
+              font-weight: 500;
+              line-height: 150%;
+              letter-spacing: $ls;
+              // color: #ffffff;
+              a{
+                text-decoration: none;
+                color: #ffffff;
+              }
+            }
+          }
+        }
+      }
+      .lastDetails{
+        display: grid;
+        // max-height: 444px;
+        .topText{
+          display: grid;
+          // max-height: 148px;
+          border-bottom: 1px solid #dee2e6;
+          padding: 12px 0px;
+          gap: 4px;
+          p{
+            display: flex;
+            justify-content: space-between;
+            font-family: $font;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: $ls;
+            color: #212559;
+          }
+          .textBox{
+            font-family: $font;
+            line-height: 150%;
+            letter-spacing: $ls;
+            color: #6c757d;
+          }
+        }
+        .middleText{
+          @extend .topText;
+        }
+        .lastText{
+          @extend .topText;
+        }
+      }
+    }
+  }
+  .shoesList{
+    width: 1920px;
+    display: grid;
+    padding: 48px 312px;
+    gap: 10px;
+    .maybeLike{
+      display: grid;
+      max-width: 1296px;
+      gap: 16px;
+      .maybeLikeText{
+        display: flex;
+        max-width: 1296px;
+        justify-content: space-between;
+        align-items: center;
+        h4{
+          font-family: $font;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 120%;
+          letter-spacing: $ls;
+          color: #212529;
+        }
+        .arrowheadBox{
+          display: flex;
+          max-width: 112px;
+          gap: 16px;
+          .leftArrowBox{
+            display: flex;
+            max-width: 48px;
+            border-radius: 4px;
+            padding: 12px;
+            gap: 8px;
+            .setArrowSmallBox{
+              width: 24px;
+              height: 24px;
+              img{
+                position: relative;
+                display: block;
+                width: 12px;
+                height: 10.5px;
+                top: 6.75px;
+                left: 6px;
+                color: #212529;
+                
+              }
+            }
+          }
+          .rightArrowBox{
+            @extend .leftArrowBox;
+          }
+        }
+      }
+      .maybeLikePic{
+        display: flex;
+        max-width: 1296px;
+        .swiper-wrapper{
+          gap: 24px;
+          .maybeLikeCard{
+            display: grid;
+            max-width: 306px;
+            gap: 12px;
+            .maybeLikeCardBox{
+              display: flex;
+              gap: 10px;
+              background: #f1f3f7;
+                img{
+                  display: block;
+                  width: 306px;
+                  height: 306px;
+                }
+              }
+            .describeBox{
+              display: grid;
+              gap: 4px;
+                p{
+                  font-family: $font;
+                  font-weight: 700;
+                  line-height: 120%;
+                  letter-spacing: $ls;
+                  color: #212529;
+                }
+                .lastP{
+                  font-weight: 500;
+                  line-height: 150%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .register{
+    width: 1920px;
+    display: grid;
+    padding-top: 40px;
+    gap: 10px;
+    .registerBox{
+      display: flex;
+      padding: 24px 0px;
+      gap: 24px;
+      background: #e8fec5;
+      justify-content: center;
+      align-items: center;
+      span{
+        height: 29px;
+        font-family: $font;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        letter-spacing: $ls;
+        color: #212529;
+      }
+      .registerBtn{
+        display: flex;
+        min-height: 48px;
+        border-radius: 4px;
+        padding: 12px 24px;
+        gap: 8px;
+        background: #212529;
+        align-items: center;
+        a{
+          font-family: $font;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 150%;
+          letter-spacing: $ls;
+          color: #ffffff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+

@@ -1,0 +1,85 @@
+
+@media screen and (max-width: 768px) {
+  
+  $font: 'Noto Sans TC', sans-serif;
+  $ls: 0.05em;
+
+*{
+  box-sizing: border-box;
+}
+
+.footBottom{
+  display: grid;
+  max-width: 1920px;
+  padding: 32px 12px;
+  gap: 24px;
+  background: #f8f9fa;
+  .footBoxI{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    .lfetFootSmallBox{
+      display: flex;
+      gap: 32px;
+      span{
+        width: 105px;
+        height: 30px;
+        font-family: 'Mina';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.044em;
+        color: #212529;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+    .rightFootSmallBox{
+      display: flex;
+      flex-direction: column;
+      padding: 0px 12px;
+      gap: 4px;
+      p{
+        display: flex;
+        padding: 12px 0px;
+        gap: 8px;
+        span{
+          font-family: $font;
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: $ls;
+          color: #212529;
+          a{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .footBoxIi{
+    display: grid;
+    border-top: 1px solid #dee2e6;
+    padding-top: 32px;
+    gap: 4px;
+    justify-items: center;
+    .lastTwo{
+      font-family: $font;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: $ls;
+    }
+    .last{
+      @extend .lastTwo;
+    }
+  }
+}
+
+}
+
+
+
+
+
+

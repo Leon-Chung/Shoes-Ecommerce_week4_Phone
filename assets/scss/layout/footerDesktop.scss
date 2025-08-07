@@ -1,0 +1,78 @@
+$font: 'Noto Sans TC', sans-serif;
+$ls: 0.05em;
+
+*{
+  box-sizing: border-box;
+}
+
+.footBottom{
+  max-width: 1920px;
+  display: grid;
+  padding: 64px 312px;
+  gap: 24px;
+  background: #f8f9fa;
+  .footBoxI{
+    display: flex;
+    max-width: 1296px;
+    justify-content: space-between;
+    align-items: center;
+    .lfetFootSmallBox{
+      display: flex;
+      max-width: 129px;
+      gap: 32px;
+      align-items: center;
+      span{
+        width: 105px;
+        height: 30px;
+        font-family: 'Mina';
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.044em;
+        color: #212529;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+    .rightFootSmallBox{
+      display: flex;
+      // max-width: 100%;
+      gap: 40px;
+      p{
+        display: flex;
+        padding: 12px 0px;
+        gap: 8px;
+        span{
+          font-family: $font;
+          font-weight: 500;
+          line-height: 150%;
+          letter-spacing: $ls;
+          color: #212529;
+          a{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  .footBoxIi{
+    display: grid;
+    max-width: 1296px;
+    border-top: 1px solid #dee2e6;
+    padding-top: 32px;
+    gap: 4px;
+    justify-items: center;
+    .lastTwo{
+      max-width: 100%;
+      font-family: $font;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      letter-spacing: $ls;
+    }
+    .last{
+      @extend .lastTwo;
+    }
+  }
+}

@@ -1,0 +1,161 @@
+@import './variables';
+
+*{
+  font-family: $font-family;
+  letter-spacing: $letterSpacing;
+  line-height: map-get($font-lh , "lh120" );
+  color: map-get($font-color , "neutral-900" );
+  box-sizing: border-box;
+}
+
+.cart{
+  display: flex;
+  flex-direction: column;
+  padding: 64px 312px;
+  gap: map-get($theme-gridGap , "spacing-5xl" );
+  align-items: center;
+  .cartContent{
+    width: 636px;
+    display: flex;
+    flex-direction: column;
+    gap: map-get($theme-gridGap , "spacing-xl" );
+    .contentTitle{
+      display: flex;
+      gap: map-get($theme-gridGap , "spacing-m" );
+      justify-content: center;
+      align-items: center;
+      .check{
+        width: 40px;
+        height: 40px;
+        .ellipse{
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: map-get($background , "primary-300" );
+          .checkLg{
+            position: relative;
+            width: 24px;
+            height: 24px;
+            top: 8px;
+            left: 8px;
+            font-family: none;
+          img{
+            position: relative;
+            width: 16.5px;
+            height: 12.75px;
+            top: 5.63px;
+            left: 4.5px;
+            color: map-get($font-color , "primary-500" );
+          }
+         }
+        }
+      }
+       .contentTexi{
+        font-weight: map-get($font-weight , "bold" );
+        font-size: map-get($font-size , "EN/Headings/H3" );
+        
+      }
+    }
+   .contentNote{
+    display: flex;
+    border-radius: map-get($border-radius , "radius-xs" );
+    padding: 16px;
+    gap: map-get($theme-gridGap , "spacing-s" );
+    background: map-get($background , "primary-100" );
+    .truck{
+      width: 24px;
+      height: 24px;
+      img{
+        position: relative;
+        height: 18.01px;
+        top: 3px;
+        color: map-get($font-color , "primary-400" );
+      }
+    }
+    .noteText{
+      font-weight: map-get($font-weight , "medium" );
+      line-height: map-get($font-lh , "lh150" );
+      color: map-get($font-color , "primary-400" );
+    }
+   }
+   .productInfoOne{
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 32px;
+    gap: map-get($theme-gridGap , "spacing-m" );
+    .productImg img{
+      width: 120px;
+      height: 120px;
+      display: block;
+      background: map-get($background , "navy" );
+    }
+    .productDetails{
+      width: 100%;
+      display: grid;
+      gap: map-get($theme-gridGap , "spacing-xs" );
+      .detailsText{
+        font-size: map-get($font-size , "TW/Headings/H5" );
+        font-weight: map-get($font-weight , "bold" );
+      }
+      .detailsLabelSize{
+        display: flex;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        .labelText{
+          line-height: map-get($font-lh , "lh150" );
+          color: map-get($font-color , "neutral-600" );
+        }
+        span{
+          font-weight: map-get($font-weight , "medium" );
+          line-height: map-get($font-lh , "lh150" );
+          letter-spacing: 0em;
+        }
+      }
+      .detailsLabelColor{
+        display: flex;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        .labelTextColor{
+          line-height: map-get($font-lh , "lh150" );
+          color: map-get($font-color , "neutral-600" );
+        }
+        span{
+          font-weight: map-get($font-weight , "medium" );
+          line-height: map-get($font-lh , "lh150" );
+          letter-spacing: 0em;
+        }
+      }
+      .properties{
+        display: flex;
+        gap: map-get($theme-gridGap , "spacing-xs" );
+        justify-content: end;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+    }
+   }
+   .cartFooter{
+    display: flex;
+    justify-content: center;
+      .cartBtn{
+        display: flex;
+        border-radius: map-get($border-radius , "radius-xs" );
+        padding: 12px 24px;
+        gap: map-get($theme-gridGap , "spacing-xs" );
+        background: map-get($background , "neutral-900" );
+        justify-content: center;
+      a{
+        color: map-get($font-color , "white" );
+        font-weight: map-get($font-weight , "medium" );
+        line-height: map-get($font-lh , "lh150" );
+        text-decoration: none;
+      }
+    }
+   }
+  }
+}
+
+
+
+
+
+

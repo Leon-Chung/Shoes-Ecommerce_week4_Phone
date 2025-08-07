@@ -1,0 +1,186 @@
+@import './variables';
+
+*{
+  font-family: $font-family;
+  line-height: map-get($font-lh , "lh120" );
+  letter-spacing: $letterSpacing;
+  color: map-get($font-color , "neutral-900" );
+  box-sizing: border-box;
+}
+
+.act{
+  border-bottom: 2px solid #212529;
+  gap: 10px;
+}
+
+.inact{
+  border-bottom: 2px solid #dee2e6;
+  gap: map-get($theme-gridGap , "spacing-xs" );
+  
+}
+.inactiveColor{
+  color: map-get($font-color , "neutral-600" );
+}
+
+//Main
+.logIn{
+  display: flex;
+  padding: 64px 312px;
+  gap: map-get($theme-gridGap, "spacing-l" );
+  .layoutImg{
+    position: relative;
+    .labelTitle{
+      position: absolute;
+      font-weight: map-get($font-weight , "bold" );
+      font-size: map-get($font-size , "Display2" );
+      color: map-get($font-color , "white" );
+      top: 71px;
+      left: 40px;
+    }
+    span{
+      position: absolute;
+      top: 144px;
+      left: 125px;
+      font-size: map-get($font-size , "EN/Headings/H4" );
+      font-weight: map-get($font-weight , "bold" );
+      color: map-get($font-color , "neutral-500" );
+    }
+    img{
+      display: block;
+      width: 526px;
+      height: 589px;
+      object-fit: cover;
+      object-position: 55% bottom;
+      border-radius: map-get($border-radius , "radius-s" );
+    }
+  }
+  .loginContent{
+    width: 746px;
+    display: flex;
+    flex-direction: column;
+    border-radius: map-get($border-radius , "radius-sm" );
+    padding: 120px 80px;
+    gap: map-get($theme-gridGap , "spacing-xl" );
+    background: map-get($background , "neutral-100" );
+    
+    .contentText{
+      display: flex;
+      justify-content: center;
+      h2{
+        font-weight: map-get($font-weight , "bold");
+        font-size: map-get($font-size , "Headings/H3" );
+      }
+    }
+    .tablist{
+      display: flex;
+      width: 586px;
+      .loginTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+      .signupTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        cursor: pointer;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+    }
+    .form{
+      display: grid;
+      width: 100%;
+      gap: map-get($theme-gridGap , "spacing-l" );
+      li{
+        display: flex;
+        border-radius: map-get($border-radius , "radius-xs" );
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        background: map-get($background , "white" );
+        align-items: center;
+        cursor: pointer;
+        .socialPlatform img{
+          width: 40px;
+          height: 40px;
+          display: block;
+        }
+        span{
+          line-height: map-get($font-lh , "lh150" );
+        }
+      }
+    }
+  }
+  // signInContent -Style
+  .signInContent{
+    width: 746px;
+    display: flex;
+    flex-direction: column;
+    border-radius: map-get($border-radius , "radius-sm" );
+    padding: 120px 80px;
+    gap: map-get($theme-gridGap , "spacing-xl" );
+    background: map-get($background , "neutral-100" );
+    
+    .contentText{
+      display: flex;
+      justify-content: center;
+      h2{
+        font-weight: map-get($font-weight , "bold");
+        font-size: map-get($font-size , "Headings/H3" );
+      }
+    }
+    .tablist{
+      display: flex;
+      width: 586px;
+      .loginTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        cursor: pointer;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+      .signupTab{
+        width: 100%;
+        display: flex;
+        padding: 12px 16px;
+        justify-content: center;
+        span{
+          font-weight: map-get($font-weight , "bold" );
+        }
+      }
+    }
+    .form{
+      display: grid;
+      width: 100%;
+      gap: map-get($theme-gridGap , "spacing-l" );
+      li{
+        display: flex;
+        border-radius: map-get($border-radius , "radius-xs" );
+        border: 1px solid #dee2e6;
+        padding: 12px;
+        gap: map-get($theme-gridGap , "spacing-s" );
+        background: map-get($background , "white" );
+        align-items: center;
+        cursor: pointer;
+        .socialPlatform img{
+          width: 40px;
+          height: 40px;
+          display: block;
+        }
+        span{
+          line-height: map-get($font-lh , "lh150" );
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+$font: 'Noto Sans TC',sans-serif;
+$ls: 0.05em;
+
+/* 鞋子樣式預設或被選中的樣式 */
+.active{
+  // background: #abcdec;
+  background: #f1f3f7;
+  transition: 0.3s;
+}
+// /* 非選中的樣式 */
+.faded{
+  background:  #ffffff;
+  transition: 0.3s;
+}
+
+/* 換頁預設或被選中的樣式 */
+.act{
+  background: #c0fa73;
+  transition: 0.3s;
+}
+// /* 非選中的樣式 */
+.fad{
+  background:  #ffffff;
+  transition: 0.3s;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+  .partIi{
+  max-width: 1920px;
+  display: grid;
+  padding-top: 48px;
+  gap: 10px;
+  .partIiBox{
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+    background: #e8fec5;
+    justify-content: center;
+    align-items: center;
+    span{
+      max-width: 100%;
+      font-family: $font;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+      letter-spacing: $ls;
+      color: #212529;
+    }
+    .btn{
+      display: flex;
+      border-radius: 4px;
+      padding: 12px 24px;
+      gap: 8px;
+      background: #212529;
+      align-items: center;
+      a{
+        text-decoration: none;
+        color: #ffffff;
+        font-family: $font;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: $ls;
+        font-size: 16px;
+      }
+    }
+  }
+}
+

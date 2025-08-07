@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mina:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="../main.js"></script>
+    <!-- 輪播 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <title>productDetails</title>
+     <style>
+      body {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        }
+
+      body.loaded {
+        visibility: visible;
+        transition: opacity 0.8s ease;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+      <%- include('./layout/productNavPhone'); -%>
+      <%- include('./layout/productDetailsPhone'); -%>
+      <%- include('./layout/footerPhone'); -%>
+
+    
+    <script>
+    const slides = document.querySelectorAll('.swiper-slide');
+    // console.log(slides);  
+    // console.log(slides.length);  //確認有幾個 .swiper-slide
+
+    let swiper = new Swiper(".mySwiper", {
+      // loop: slides.length >= 5, // 循環
+      loop: true, // 循環
+      watchSlidesProgress: true,
+      // slidesPerView: 3.94,
+      slidesPerView: 4.32,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+  </body>
+</html>

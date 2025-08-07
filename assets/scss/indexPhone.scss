@@ -1,0 +1,24 @@
+@import './layout/reset';
+//<phone>
+@import './layout/navPhone.scss';
+//for-productList & productDetails -Use
+@import './layout/productNavPhone.scss';
+@import './layout/indexPhone.scss';
+//for-Index&productList-Use
+@import './layout/sectionPhone.scss';
+@import './layout/footerPhone.scss';
+
+//<productList>
+@import './layout/productListPhone.scss';
+
+//<productDetails>
+@import './layout/productDetailsPhone.scss';
+
+//<productCollect>
+@import './layout/productCollectPhone.scss';
+
+//<LoginAndSignUp>
+@import './layout/LoginAndSignUpPhone.scss';
+
+//<brandStory>
+@import './layout/brandStoryPhone.scss';

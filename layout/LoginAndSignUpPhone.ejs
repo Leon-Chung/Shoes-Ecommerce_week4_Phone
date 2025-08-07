@@ -1,0 +1,71 @@
+
+  <main id="app" >
+    <div class="logIn"  @click.prevent="change($event)">
+      <div class="layoutImg">
+        <span class="labelTitle">
+          URBNSTEP
+        </span>
+        <span>Your Step, Your Statement</span>
+        <img src="../assets/images/hightHero.png" alt="heroShoesBackground">
+      </div>
+      <div class="loginContent" v-show="isLoginShow">
+        <div class="contentText">
+          <h2>歡迎！</h2>
+        </div>
+        <div class="tablist">
+          <div class="loginTab active"><span>登入</span></div>
+          <div class="signupTab inactive" data-action="signIn"><span class="inactiveColor">註冊</span></div>
+        </div>
+        <ul class="form">
+          <li>
+            <div class="socialPlatform">
+              <img src="../assets/images/Facebook.png" alt="FacebookIcon">
+            </div>
+            <span>Facebook 登入</span>
+        </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="../assets/images/apple.png" alt="AppleIcon">
+            </div>
+            <span>Apple 登入</span>
+          </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="../assets/images/google.png" alt="GoogleIcon">
+            </div>
+            <span>Google 登入</span>
+          </li>
+        </ul>
+      </div>
+      <!-- signIn -->
+      <div class="signInContent" v-show="isSignInShow">
+        <div class="contentText">
+          <h2>歡迎！</h2>
+        </div>
+        <div class="tablist">
+          <div class="loginTab inactive" data-action="logIn"><span class="inactiveColor">登入</span></div>
+          <div class="signupTab active"><span>註冊</span></div>
+        </div>
+        <ul class="form">
+          <li>
+            <div class="socialPlatform">
+              <img src="../assets/images/Facebook.png" alt="FacebookIcon">
+            </div>
+            <span>Facebook&nbsp;註冊</span>
+        </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="../assets/images/apple.png" alt="AppleIcon">
+            </div>
+            <span>Apple&nbsp;註冊</span>
+          </li>
+          <li>
+            <div class="socialPlatform">
+              <img src="../assets/images/google.png" alt="GoogleIcon">
+            </div>
+            <span>Google&nbsp;註冊</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
